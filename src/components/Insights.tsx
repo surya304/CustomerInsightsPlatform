@@ -1,7 +1,18 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { AlertTriangle, TrendingUp, AlertCircle } from 'lucide-react';
+import { 
+  AlertTriangle, 
+  TrendingUp, 
+  AlertCircle, 
+  Info,
+  HelpCircle 
+} from 'lucide-react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface FeedbackItem {
   id: string;
@@ -53,11 +64,30 @@ const Insights: React.FC<InsightsProps> = ({ data }) => {
       .slice(0, 3);
   };
 
+  const renderInfoTooltip = (content: string) => (
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger>
+          <HelpCircle className="h-4 w-4 ml-2 text-muted-foreground" />
+        </TooltipTrigger>
+        <TooltipContent>
+          <p className="max-w-xs text-sm">{content}</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  );
+
   const generateInsightCard = (title: string, description: string, recommendations: string[], priority: 'high' | 'medium' | 'low') => {
     const priorityColors = {
       high: 'bg-red-100 dark:bg-red-900',
       medium: 'bg-yellow-100 dark:bg-yellow-900',
       low: 'bg-green-100 dark:bg-green-900'
+    };
+
+    const priorityInfo = {
+      high: 'Requires immediate attention',
+      medium: 'Should be addressed soon',
+      low: 'Monitor for changes'
     };
 
     return (
@@ -68,12 +98,16 @@ const Insights: React.FC<InsightsProps> = ({ data }) => {
             {priority === 'medium' && <AlertCircle className="w-5 h-5 text-yellow-500" />}
             {priority === 'low' && <TrendingUp className="w-5 h-5 text-green-500" />}
             {title}
+            {renderInfoTooltip(priorityInfo[priority])}
           </CardTitle>
         </CardHeader>
         <CardContent>
           <p className="mb-4 text-sm">{description}</p>
           <div className="space-y-2">
-            <h4 className="font-semibold">Recommendations:</h4>
+            <h4 className="font-semibold flex items-center">
+              Recommended Actions
+              {renderInfoTooltip("Suggested steps to address this insight")}
+            </h4>
             <ul className="list-disc list-inside space-y-1 text-sm">
               {recommendations.map((rec, index) => (
                 <li key={index}>{rec}</li>
@@ -110,78 +144,122 @@ const Insights: React.FC<InsightsProps> = ({ data }) => {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-3xl font-bold text-foreground">Actionable Insights</h2>
-      
+      <div className="space-y-2">
+        <div className="flex items-center">
+          <h2 className="text-3xl font-bold text-foreground">Actionable Insights</h2>
+          {renderInfoTooltip(
+            "Analysis of feedback data highlighting key areas requiring attention"
+          )}
+        </div>
+        <div className="bg-muted p-4 rounded-lg">
+          <h3 className="font-semibold flex items-center mb-2">
+            Understanding Priority Levels
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <div className="flex items-center gap-2">
+              <AlertTriangle className="w-4 h-4 text-red-500" />
+              <span>High Priority: Immediate action needed</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <AlertCircle className="w-4 h-4 text-yellow-500" />
+              <span>Medium Priority: Plan to address soon</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-4 h-4 text-green-500" />
+              <span>Low Priority: Monitor situation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <Tabs defaultValue="reviews" className="space-y-4">
         <TabsList>
-          <TabsTrigger value="reviews">Reviews Insights</TabsTrigger>
-          <TabsTrigger value="surveys">Survey Insights</TabsTrigger>
-          <TabsTrigger value="social">Social Media Insights</TabsTrigger>
-          <TabsTrigger value="support">Support Insights</TabsTrigger>
+          <TabsTrigger value="reviews">
+            Reviews ({data.reviews.length})
+            {renderInfoTooltip("Insights from customer product reviews")}
+          </TabsTrigger>
+          <TabsTrigger value="surveys">
+            Surveys ({data.surveys.length})
+            {renderInfoTooltip("Insights from customer feedback surveys")}
+          </TabsTrigger>
+          <TabsTrigger value="social">
+            Social Media ({data.socialMediaPosts.length})
+            {renderInfoTooltip("Insights from social media mentions")}
+          </TabsTrigger>
+          <TabsTrigger value="support">
+            Support ({data.customerSupportTickets.length})
+            {renderInfoTooltip("Insights from customer support interactions")}
+          </TabsTrigger>
         </TabsList>
 
+        <TabsContent value="reviews" className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {analyzeSourceData(data.reviews).map((insight, index) => (
+              <div key={`review-insight-${index}`}>
+                {generateInsightCard(
+                  insight.title,
+                  insight.description,
+                  insight.recommendations,
+                  insight.priority
+                )}
+              </div>
+            ))}
+          </div>
+        </TabsContent>
 
-<TabsContent value="reviews" className="space-y-4">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-    {analyzeSourceData(data.reviews).map((insight, index) => (
-      <div key={`review-insight-${index}`}>
-        {generateInsightCard(
-          insight.title,
-          insight.description,
-          insight.recommendations,
-          insight.priority
-        )}
-      </div>
-    ))}
-  </div>
-</TabsContent>
+        <TabsContent value="surveys" className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {analyzeSourceData(data.surveys).map((insight, index) => (
+              <div key={`survey-insight-${index}`}>
+                {generateInsightCard(
+                  insight.title,
+                  insight.description,
+                  insight.recommendations,
+                  insight.priority
+                )}
+              </div>
+            ))}
+          </div>
+        </TabsContent>
 
-<TabsContent value="surveys" className="space-y-4">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-    {analyzeSourceData(data.surveys).map((insight, index) => (
-      <div key={`survey-insight-${index}`}>
-        {generateInsightCard(
-          insight.title,
-          insight.description,
-          insight.recommendations,
-          insight.priority
-        )}
-      </div>
-    ))}
-  </div>
-</TabsContent>
+        <TabsContent value="social" className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {analyzeSourceData(data.socialMediaPosts).map((insight, index) => (
+              <div key={`social-insight-${index}`}>
+                {generateInsightCard(
+                  insight.title,
+                  insight.description,
+                  insight.recommendations,
+                  insight.priority
+                )}
+              </div>
+            ))}
+          </div>
+        </TabsContent>
 
-<TabsContent value="social" className="space-y-4">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-    {analyzeSourceData(data.socialMediaPosts).map((insight, index) => (
-      <div key={`social-insight-${index}`}>
-        {generateInsightCard(
-          insight.title,
-          insight.description,
-          insight.recommendations,
-          insight.priority
-        )}
-      </div>
-    ))}
-  </div>
-</TabsContent>
-
-<TabsContent value="support" className="space-y-4">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-    {analyzeSourceData(data.customerSupportTickets).map((insight, index) => (
-      <div key={`support-insight-${index}`}>
-        {generateInsightCard(
-          insight.title,
-          insight.description,
-          insight.recommendations,
-          insight.priority
-        )}
-      </div>
-    ))}
-  </div>
-</TabsContent>
+        <TabsContent value="support" className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {analyzeSourceData(data.customerSupportTickets).map((insight, index) => (
+              <div key={`support-insight-${index}`}>
+                {generateInsightCard(
+                  insight.title,
+                  insight.description,
+                  insight.recommendations,
+                  insight.priority
+                )}
+              </div>
+            ))}
+          </div>
+        </TabsContent>
 
       </Tabs>
+
+      <div className="text-sm text-muted-foreground mt-4">
+        <p className="flex items-center gap-2">
+          <Info className="w-4 h-4" />
+          Insights are automatically generated based on sentiment analysis and frequency of mentions.
+        </p>
+      </div>
     </div>
   );
 };
