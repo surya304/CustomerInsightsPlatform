@@ -1,6 +1,5 @@
-import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { LayoutDashboard, BarChart2, MessageSquare, LineChart, Lightbulb } from "lucide-react"
+import { LayoutDashboard, BarChart2, MessageSquare, Lightbulb } from "lucide-react"
 import { useNavigate, useLocation } from "react-router-dom"
 
 const sidebarItems = [

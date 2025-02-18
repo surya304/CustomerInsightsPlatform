@@ -109,7 +109,7 @@ const useData = () => {
                     }
                 `;
 
-                const result = await client.request(query);
+                const result = await client.request<Data>(query);
                 setData(result);
                 setLoading(false);
             } catch (err: any) {
