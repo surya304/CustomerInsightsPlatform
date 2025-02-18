@@ -1,4 +1,3 @@
-
 import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -21,11 +20,23 @@ ChartJS.register(
   Legend
 );
 
+interface FeedbackItem {
+  category: string[];
+  sentiment: 'positive' | 'negative' | 'neutral';
+}
+
 interface FeedbackData {
-  reviews: any[];
-  surveys: any[];
-  socialMediaPosts: any[];
-  customerSupportTickets: any[];
+  reviews: FeedbackItem[];
+  surveys: FeedbackItem[];
+  socialMediaPosts: FeedbackItem[];
+  customerSupportTickets: FeedbackItem[];
+}
+
+interface CategoryData {
+  total: number;
+  positive: number;
+  negative: number;
+  neutral: number;
 }
 
 interface CategoryAnalysisProps {
@@ -33,8 +44,8 @@ interface CategoryAnalysisProps {
 }
 
 const CategoryAnalysis: React.FC<CategoryAnalysisProps> = ({ data }) => {
-  const getCategoryData = (items: any[]) => {
-    const categories: { [key: string]: { total: number, positive: number, negative: number, neutral: number } } = {};
+  const getCategoryData = (items: FeedbackItem[]) => {
+    const categories: Record<string, CategoryData> = {};
     
     items.forEach(item => {
       if (Array.isArray(item.category)) {
@@ -51,28 +62,28 @@ const CategoryAnalysis: React.FC<CategoryAnalysisProps> = ({ data }) => {
     return categories;
   };
 
-  const createBarChartData = (categoryData: any) => {
+  const createBarChartData = (categoryData: Record<string, CategoryData>) => {
     const sortedCategories = Object.entries(categoryData)
-      .sort(([, a], [, b]) => b.total - a.total);
+      .sort(([, a], [, b]) => (b as CategoryData).total - (a as CategoryData).total);
 
     return {
       labels: sortedCategories.map(([category]) => category),
       datasets: [
         {
           label: 'Positive',
-          data: sortedCategories.map(([, data]) => data.positive),
+          data: sortedCategories.map(([, data]) => (data as CategoryData).positive),
           backgroundColor: '#22c55e',
           stack: 'Stack 0',
         },
         {
           label: 'Neutral',
-          data: sortedCategories.map(([, data]) => data.neutral),
+          data: sortedCategories.map(([, data]) => (data as CategoryData).neutral),
           backgroundColor: '#f59e0b',
           stack: 'Stack 0',
         },
         {
           label: 'Negative',
-          data: sortedCategories.map(([, data]) => data.negative),
+          data: sortedCategories.map(([, data]) => (data as CategoryData).negative),
           backgroundColor: '#ef4444',
           stack: 'Stack 0',
         },
