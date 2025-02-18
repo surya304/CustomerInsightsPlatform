@@ -1,0 +1,82 @@
+[
+  {
+    "respondent_id": "user_003",
+    "question": "How likely are you to recommend us?",
+    "response": "I’d recommend you to friends! Great service.",
+    "sentiment": "positive",
+    "category": ["Customer Loyalty"],
+    "date": "2024-03-01T11:00:00Z"
+  },
+  {
+    "respondent_id": "user_004",
+    "question": "What disappointed you?",
+    "response": "The app crashes frequently.",
+    "sentiment": "negative",
+    "category": ["Software Stability"],
+    "date": "2024-03-02T14:20:00Z"
+  },
+  {
+    "respondent_id": "user_005",
+    "question": "How satisfied are you with delivery speed?",
+    "response": "Took 2 weeks to arrive. Too slow!",
+    "sentiment": "negative",
+    "category": ["Shipping"],
+    "date": "2024-03-03T10:45:00Z"
+  },
+  {
+    "respondent_id": "user_006",
+    "question": "What do you love about our product?",
+    "response": "The ergonomic design is fantastic.",
+    "sentiment": "positive",
+    "category": ["Design"],
+    "date": "2024-03-04T16:30:00Z"
+  },
+  {
+    "respondent_id": "user_007",
+    "question": "How can we improve?",
+    "response": "Offer more payment options like PayPal.",
+    "sentiment": "neutral",
+    "category": ["Payment Options"],
+    "date": "2024-03-05T12:15:00Z"
+  },
+  {
+    "respondent_id": "user_008",
+    "question": "Rate your checkout experience.",
+    "response": "Smooth and hassle-free!",
+    "sentiment": "positive",
+    "category": ["Checkout Process"],
+    "date": "2024-03-06T09:00:00Z"
+  },
+  {
+    "respondent_id": "user_009",
+    "question": "What frustrated you today?",
+    "response": "The website kept logging me out.",
+    "sentiment": "negative",
+    "category": ["Website UX"],
+    "date": "2024-03-07T14:50:00Z"
+  },
+  {
+    "respondent_id": "user_010",
+    "question": "What’s your favorite feature?",
+    "response": "The dark mode option is easy on the eyes.",
+    "sentiment": "positive",
+    "category": ["Product Features"],
+    "date": "2024-03-08T17:00:00Z"
+  },
+  {
+    "respondent_id": "user_011",
+    "question": "Any additional feedback?",
+    "response": "The product is okay, but the manual is unclear.",
+    "sentiment": "neutral",
+    "category": ["Documentation"],
+    "date": "2024-03-09T10:10:00Z"
+  },
+  {
+    "respondent_id": "user_012",
+    "question": "How would you rate our packaging?",
+    "response": "Eco-friendly and secure!",
+    "sentiment": "positive",
+    "category": ["Packaging"],
+    "date": "2024-03-10T13:40:00Z"
+  }
+]

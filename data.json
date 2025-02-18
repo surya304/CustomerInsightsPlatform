@@ -1,0 +1,477 @@
+{
+    "reviews": [
+        {
+            "id": "67b3844607174853ed17ca70",
+            "source": "Amazon",
+            "text": "This blender is a game-changer! Quiet and powerful.",
+            "rating": 5,
+            "sentiment": "positive",
+            "category": [
+                "Product Quality"
+            ],
+            "date": "1709287200000"
+        },
+        {
+            "id": "67b3844607174853ed17ca71",
+            "source": "Google Reviews",
+            "text": "Never received my order. No response from support.",
+            "rating": 1,
+            "sentiment": "negative",
+            "category": [
+                "Shipping",
+                "Customer Service"
+            ],
+            "date": "1709379000000"
+        },
+        {
+            "id": "67b3844607174853ed17ca72",
+            "source": "Walmart",
+            "text": "Good for the price, but the battery drains quickly.",
+            "rating": 3,
+            "sentiment": "neutral",
+            "category": [
+                "Price",
+                "Product Quality"
+            ],
+            "date": "1709475300000"
+        },
+        {
+            "id": "67b3844607174853ed17ca73",
+            "source": "Best Buy",
+            "text": "The camera quality is stunning. Highly recommend!",
+            "rating": 5,
+            "sentiment": "positive",
+            "category": [
+                "Product Features"
+            ],
+            "date": "1709545500000"
+        },
+        {
+            "id": "67b3844607174853ed17ca74",
+            "source": "Amazon",
+            "text": "Defective item. Return process was a nightmare.",
+            "rating": 2,
+            "sentiment": "negative",
+            "category": [
+                "Product Defect",
+                "Returns"
+            ],
+            "date": "1709655600000"
+        },
+        {
+            "id": "67b3844607174853ed17ca75",
+            "source": "Target",
+            "text": "Cute design, but the fabric feels cheap.",
+            "rating": 3,
+            "sentiment": "neutral",
+            "category": [
+                "Design",
+                "Product Quality"
+            ],
+            "date": "1709727000000"
+        },
+        {
+            "id": "67b3844607174853ed17ca76",
+            "source": "Etsy",
+            "text": "Handmade with love! Perfect gift.",
+            "rating": 5,
+            "sentiment": "positive",
+            "category": [
+                "Craftsmanship"
+            ],
+            "date": "1709801400000"
+        },
+        {
+            "id": "67b3844607174853ed17ca77",
+            "source": "Google Reviews",
+            "text": "Overpriced and underwhelming performance.",
+            "rating": 2,
+            "sentiment": "negative",
+            "category": [
+                "Price",
+                "Product Quality"
+            ],
+            "date": "1709919000000"
+        },
+        {
+            "id": "67b3844607174853ed17ca78",
+            "source": "Amazon",
+            "text": "Easy setup and works flawlessly.",
+            "rating": 4,
+            "sentiment": "positive",
+            "category": [
+                "Usability"
+            ],
+            "date": "1709990700000"
+        },
+        {
+            "id": "67b3844607174853ed17ca79",
+            "source": "Walmart",
+            "text": "Average product. Not worth the hype.",
+            "rating": 3,
+            "sentiment": "neutral",
+            "category": [
+                "Product Quality"
+            ],
+            "date": "1710082800000"
+        }
+    ],
+    "surveys": [
+        {
+            "id": "67b3844607174853ed17ca7b",
+            "respondent_id": "user_003",
+            "question": "How likely are you to recommend us?",
+            "response": "I’d recommend you to friends! Great service.",
+            "sentiment": "positive",
+            "category": [
+                "Customer Loyalty"
+            ],
+            "date": "1709290800000"
+        },
+        {
+            "id": "67b3844607174853ed17ca7c",
+            "respondent_id": "user_004",
+            "question": "What disappointed you?",
+            "response": "The app crashes frequently.",
+            "sentiment": "negative",
+            "category": [
+                "Software Stability"
+            ],
+            "date": "1709389200000"
+        },
+        {
+            "id": "67b3844607174853ed17ca7d",
+            "respondent_id": "user_005",
+            "question": "How satisfied are you with delivery speed?",
+            "response": "Took 2 weeks to arrive. Too slow!",
+            "sentiment": "negative",
+            "category": [
+                "Shipping"
+            ],
+            "date": "1709462700000"
+        },
+        {
+            "id": "67b3844607174853ed17ca7e",
+            "respondent_id": "user_006",
+            "question": "What do you love about our product?",
+            "response": "The ergonomic design is fantastic.",
+            "sentiment": "positive",
+            "category": [
+                "Design"
+            ],
+            "date": "1709569800000"
+        },
+        {
+            "id": "67b3844607174853ed17ca7f",
+            "respondent_id": "user_007",
+            "question": "How can we improve?",
+            "response": "Offer more payment options like PayPal.",
+            "sentiment": "neutral",
+            "category": [
+                "Payment Options"
+            ],
+            "date": "1709640900000"
+        },
+        {
+            "id": "67b3844607174853ed17ca80",
+            "respondent_id": "user_008",
+            "question": "Rate your checkout experience.",
+            "response": "Smooth and hassle-free!",
+            "sentiment": "positive",
+            "category": [
+                "Checkout Process"
+            ],
+            "date": "1709715600000"
+        },
+        {
+            "id": "67b3844607174853ed17ca81",
+            "respondent_id": "user_009",
+            "question": "What frustrated you today?",
+            "response": "The website kept logging me out.",
+            "sentiment": "negative",
+            "category": [
+                "Website UX"
+            ],
+            "date": "1709823000000"
+        },
+        {
+            "id": "67b3844607174853ed17ca82",
+            "respondent_id": "user_010",
+            "question": "What’s your favorite feature?",
+            "response": "The dark mode option is easy on the eyes.",
+            "sentiment": "positive",
+            "category": [
+                "Product Features"
+            ],
+            "date": "1709917200000"
+        },
+        {
+            "id": "67b3844607174853ed17ca83",
+            "respondent_id": "user_011",
+            "question": "Any additional feedback?",
+            "response": "The product is okay, but the manual is unclear.",
+            "sentiment": "neutral",
+            "category": [
+                "Documentation"
+            ],
+            "date": "1709979000000"
+        },
+        {
+            "id": "67b3844607174853ed17ca84",
+            "respondent_id": "user_012",
+            "question": "How would you rate our packaging?",
+            "response": "Eco-friendly and secure!",
+            "sentiment": "positive",
+            "category": [
+                "Packaging"
+            ],
+            "date": "1710078000000"
+        }
+    ],
+    "socialMediaPosts": [
+        {
+            "id": "67b3844607174853ed17ca86",
+            "platform": "Twitter",
+            "username": "@gadgetfan",
+            "text": "This new smartwatch is a lifesaver! 🚀 #tech",
+            "hashtags": [
+                "#tech"
+            ],
+            "likes": 89,
+            "sentiment": "positive",
+            "date": "1709294400000"
+        },
+        {
+            "id": "67b3844607174853ed17ca87",
+            "platform": "Facebook",
+            "username": "Sarah Johnson",
+            "text": "Horrible experience! My order arrived broken.",
+            "hashtags": [],
+            "likes": 12,
+            "sentiment": "negative",
+            "date": "1709393400000"
+        },
+        {
+            "id": "67b3844607174853ed17ca88",
+            "platform": "Instagram",
+            "username": "travel_lover",
+            "text": "Love my new backpack! Perfect for hikes. 🏞️",
+            "hashtags": [
+                "#outdoorgear"
+            ],
+            "likes": 234,
+            "sentiment": "positive",
+            "date": "1709461200000"
+        },
+        {
+            "id": "67b3844607174853ed17ca89",
+            "platform": "Reddit",
+            "username": "u/techguru",
+            "text": "Avoid this brand. Their customer support is nonexistent.",
+            "hashtags": [],
+            "likes": 45,
+            "sentiment": "negative",
+            "date": "1709577900000"
+        },
+        {
+            "id": "67b3844607174853ed17ca8a",
+            "platform": "Twitter",
+            "username": "@fitnessjunkie",
+            "text": "The fitness tracker syncs perfectly with my apps. 👏",
+            "hashtags": [
+                "#fitness"
+            ],
+            "likes": 67,
+            "sentiment": "positive",
+            "date": "1709622900000"
+        },
+        {
+            "id": "67b3844607174853ed17ca8b",
+            "platform": "Facebook",
+            "username": "Mike Thompson",
+            "text": "Still waiting for a refund after 3 weeks. 😡",
+            "hashtags": [],
+            "likes": 8,
+            "sentiment": "negative",
+            "date": "1709751600000"
+        },
+        {
+            "id": "67b3844607174853ed17ca8c",
+            "platform": "Instagram",
+            "username": "foodie_gram",
+            "text": "The air fryer cooks evenly! #kitchenessentials",
+            "hashtags": [
+                "#kitchenessentials"
+            ],
+            "likes": 156,
+            "sentiment": "positive",
+            "date": "1709811000000"
+        },
+        {
+            "id": "67b3844607174853ed17ca8d",
+            "platform": "Reddit",
+            "username": "u/disappointed_user",
+            "text": "The software update ruined my device. Avoid!",
+            "hashtags": [],
+            "likes": 32,
+            "sentiment": "negative",
+            "date": "1709907000000"
+        },
+        {
+            "id": "67b3844607174853ed17ca8e",
+            "platform": "Twitter",
+            "username": "@parenting101",
+            "text": "The baby monitor has poor connectivity. Not recommended.",
+            "hashtags": [
+                "#parenting"
+            ],
+            "likes": 23,
+            "sentiment": "negative",
+            "date": "1710003000000"
+        },
+        {
+            "id": "67b3844607174853ed17ca8f",
+            "platform": "Instagram",
+            "username": "fashionista",
+            "text": "Obsessed with these shoes! 💃 #ootd",
+            "hashtags": [
+                "#ootd"
+            ],
+            "likes": 302,
+            "sentiment": "positive",
+            "date": "1710061500000"
+        }
+    ],
+    "customerSupportTickets": [
+        {
+            "id": "67b3844607174853ed17ca91",
+            "interaction_type": "chat",
+            "customer_id": "cust_1001",
+            "agent_id": "agent_012",
+            "text": "My account was charged twice. Please fix this!",
+            "resolution_status": "resolved",
+            "sentiment": "negative",
+            "category": [
+                "Billing"
+            ],
+            "date": "1709299200000"
+        },
+        {
+            "id": "67b3844607174853ed17ca92",
+            "interaction_type": "email",
+            "customer_id": "cust_1002",
+            "agent_id": "agent_015",
+            "text": "The product manual is missing pages. Can you send a PDF?",
+            "resolution_status": "pending",
+            "sentiment": "neutral",
+            "category": [
+                "Documentation"
+            ],
+            "date": "1709376300000"
+        },
+        {
+            "id": "67b3844607174853ed17ca93",
+            "interaction_type": "phone",
+            "customer_id": "cust_1003",
+            "agent_id": "agent_008",
+            "text": "The device overheats during use. Need a replacement.",
+            "resolution_status": "escalated",
+            "sentiment": "negative",
+            "category": [
+                "Product Defect"
+            ],
+            "date": "1709478000000"
+        },
+        {
+            "id": "67b3844607174853ed17ca94",
+            "interaction_type": "chat",
+            "customer_id": "cust_1004",
+            "agent_id": "agent_010",
+            "text": "Thank you for the quick resolution!",
+            "resolution_status": "resolved",
+            "sentiment": "positive",
+            "category": [
+                "General Feedback"
+            ],
+            "date": "1709550600000"
+        },
+        {
+            "id": "67b3844607174853ed17ca95",
+            "interaction_type": "email",
+            "customer_id": "cust_1005",
+            "agent_id": "agent_017",
+            "text": "My discount code isn’t working. Help!",
+            "resolution_status": "resolved",
+            "sentiment": "negative",
+            "category": [
+                "Promotions"
+            ],
+            "date": "1709649000000"
+        },
+        {
+            "id": "67b3844607174853ed17ca96",
+            "interaction_type": "phone",
+            "customer_id": "cust_1006",
+            "agent_id": "agent_005",
+            "text": "The warranty claim process is too complicated.",
+            "resolution_status": "pending",
+            "sentiment": "negative",
+            "category": [
+                "Warranty"
+            ],
+            "date": "1709743200000"
+        },
+        {
+            "id": "67b3844607174853ed17ca97",
+            "interaction_type": "chat",
+            "customer_id": "cust_1007",
+            "agent_id": "agent_019",
+            "text": "The agent was rude and unhelpful.",
+            "resolution_status": "escalated",
+            "sentiment": "negative",
+            "category": [
+                "Customer Service"
+            ],
+            "date": "1709816100000"
+        },
+        {
+            "id": "67b3844607174853ed17ca98",
+            "interaction_type": "email",
+            "customer_id": "cust_1008",
+            "agent_id": "agent_003",
+            "text": "Can I change my shipping address?",
+            "resolution_status": "resolved",
+            "sentiment": "neutral",
+            "category": [
+                "Shipping"
+            ],
+            "date": "1709889900000"
+        },
+        {
+            "id": "67b3844607174853ed17ca99",
+            "interaction_type": "phone",
+            "customer_id": "cust_1009",
+            "agent_id": "agent_011",
+            "text": "The product works great! No complaints.",
+            "resolution_status": "resolved",
+            "sentiment": "positive",
+            "category": [
+                "General Feedback"
+            ],
+            "date": "1710004500000"
+        },
+        {
+            "id": "67b3844607174853ed17ca9a",
+            "interaction_type": "chat",
+            "customer_id": "cust_1010",
+            "agent_id": "agent_014",
+            "text": "My order status hasn’t updated in 5 days.",
+            "resolution_status": "pending",
+            "sentiment": "negative",
+            "category": [
+                "Shipping"
+            ],
+            "date": "1710079500000"
+        }
+    ]
+}

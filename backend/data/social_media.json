@@ -1,0 +1,92 @@
+[
+  {
+    "platform": "Twitter",
+    "username": "@gadgetfan",
+    "text": "This new smartwatch is a lifesaver! 🚀 #tech",
+    "hashtags": ["#tech"],
+    "likes": 89,
+    "sentiment": "positive",
+    "date": "2024-03-01T12:00:00Z"
+  },
+  {
+    "platform": "Facebook",
+    "username": "Sarah Johnson",
+    "text": "Horrible experience! My order arrived broken.",
+    "hashtags": [],
+    "likes": 12,
+    "sentiment": "negative",
+    "date": "2024-03-02T15:30:00Z"
+  },
+  {
+    "platform": "Instagram",
+    "username": "travel_lover",
+    "text": "Love my new backpack! Perfect for hikes. 🏞️",
+    "hashtags": ["#outdoorgear"],
+    "likes": 234,
+    "sentiment": "positive",
+    "date": "2024-03-03T10:20:00Z"
+  },
+  {
+    "platform": "Reddit",
+    "username": "u/techguru",
+    "text": "Avoid this brand. Their customer support is nonexistent.",
+    "hashtags": [],
+    "likes": 45,
+    "sentiment": "negative",
+    "date": "2024-03-04T18:45:00Z"
+  },
+  {
+    "platform": "Twitter",
+    "username": "@fitnessjunkie",
+    "text": "The fitness tracker syncs perfectly with my apps. 👏",
+    "hashtags": ["#fitness"],
+    "likes": 67,
+    "sentiment": "positive",
+    "date": "2024-03-05T07:15:00Z"
+  },
+  {
+    "platform": "Facebook",
+    "username": "Mike Thompson",
+    "text": "Still waiting for a refund after 3 weeks. 😡",
+    "hashtags": [],
+    "likes": 8,
+    "sentiment": "negative",
+    "date": "2024-03-06T19:00:00Z"
+  },
+  {
+    "platform": "Instagram",
+    "username": "foodie_gram",
+    "text": "The air fryer cooks evenly! #kitchenessentials",
+    "hashtags": ["#kitchenessentials"],
+    "likes": 156,
+    "sentiment": "positive",
+    "date": "2024-03-07T11:30:00Z"
+  },
+  {
+    "platform": "Reddit",
+    "username": "u/disappointed_user",
+    "text": "The software update ruined my device. Avoid!",
+    "hashtags": [],
+    "likes": 32,
+    "sentiment": "negative",
+    "date": "2024-03-08T14:10:00Z"
+  },
+  {
+    "platform": "Twitter",
+    "username": "@parenting101",
+    "text": "The baby monitor has poor connectivity. Not recommended.",
+    "hashtags": ["#parenting"],
+    "likes": 23,
+    "sentiment": "negative",
+    "date": "2024-03-09T16:50:00Z"
+  },
+  {
+    "platform": "Instagram",
+    "username": "fashionista",
+    "text": "Obsessed with these shoes! 💃 #ootd",
+    "hashtags": ["#ootd"],
+    "likes": 302,
+    "sentiment": "positive",
+    "date": "2024-03-10T09:05:00Z"
+  }
+]

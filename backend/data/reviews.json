@@ -1,0 +1,82 @@
+[
+  {
+    "source": "Amazon",
+    "text": "This blender is a game-changer! Quiet and powerful.",
+    "rating": 5,
+    "sentiment": "positive",
+    "category": ["Product Quality"],
+    "date": "2024-03-01T10:00:00Z"
+  },
+  {
+    "source": "Google Reviews",
+    "text": "Never received my order. No response from support.",
+    "rating": 1,
+    "sentiment": "negative",
+    "category": ["Shipping", "Customer Service"],
+    "date": "2024-03-02T11:30:00Z"
+  },
+  {
+    "source": "Walmart",
+    "text": "Good for the price, but the battery drains quickly.",
+    "rating": 3,
+    "sentiment": "neutral",
+    "category": ["Price", "Product Quality"],
+    "date": "2024-03-03T14:15:00Z"
+  },
+  {
+    "source": "Best Buy",
+    "text": "The camera quality is stunning. Highly recommend!",
+    "rating": 5,
+    "sentiment": "positive",
+    "category": ["Product Features"],
+    "date": "2024-03-04T09:45:00Z"
+  },
+  {
+    "source": "Amazon",
+    "text": "Defective item. Return process was a nightmare.",
+    "rating": 2,
+    "sentiment": "negative",
+    "category": ["Product Defect", "Returns"],
+    "date": "2024-03-05T16:20:00Z"
+  },
+  {
+    "source": "Target",
+    "text": "Cute design, but the fabric feels cheap.",
+    "rating": 3,
+    "sentiment": "neutral",
+    "category": ["Design", "Product Quality"],
+    "date": "2024-03-06T12:10:00Z"
+  },
+  {
+    "source": "Etsy",
+    "text": "Handmade with love! Perfect gift.",
+    "rating": 5,
+    "sentiment": "positive",
+    "category": ["Craftsmanship"],
+    "date": "2024-03-07T08:50:00Z"
+  },
+  {
+    "source": "Google Reviews",
+    "text": "Overpriced and underwhelming performance.",
+    "rating": 2,
+    "sentiment": "negative",
+    "category": ["Price", "Product Quality"],
+    "date": "2024-03-08T17:30:00Z"
+  },
+  {
+    "source": "Amazon",
+    "text": "Easy setup and works flawlessly.",
+    "rating": 4,
+    "sentiment": "positive",
+    "category": ["Usability"],
+    "date": "2024-03-09T13:25:00Z"
+  },
+  {
+    "source": "Walmart",
+    "text": "Average product. Not worth the hype.",
+    "rating": 3,
+    "sentiment": "neutral",
+    "category": ["Product Quality"],
+    "date": "2024-03-10T15:00:00Z"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "interaction_type": "chat",
+    "customer_id": "cust_1001",
+    "agent_id": "agent_012",
+    "text": "My account was charged twice. Please fix this!",
+    "resolution_status": "resolved",
+    "sentiment": "negative",
+    "category": ["Billing"],
+    "date": "2024-03-01T13:20:00Z"
+  },
+  {
+    "interaction_type": "email",
+    "customer_id": "cust_1002",
+    "agent_id": "agent_015",
+    "text": "The product manual is missing pages. Can you send a PDF?",
+    "resolution_status": "pending",
+    "sentiment": "neutral",
+    "category": ["Documentation"],
+    "date": "2024-03-02T10:45:00Z"
+  },
+  {
+    "interaction_type": "phone",
+    "customer_id": "cust_1003",
+    "agent_id": "agent_008",
+    "text": "The device overheats during use. Need a replacement.",
+    "resolution_status": "escalated",
+    "sentiment": "negative",
+    "category": ["Product Defect"],
+    "date": "2024-03-03T15:00:00Z"
+  },
+  {
+    "interaction_type": "chat",
+    "customer_id": "cust_1004",
+    "agent_id": "agent_010",
+    "text": "Thank you for the quick resolution!",
+    "resolution_status": "resolved",
+    "sentiment": "positive",
+    "category": ["General Feedback"],
+    "date": "2024-03-04T11:10:00Z"
+  },
+  {
+    "interaction_type": "email",
+    "customer_id": "cust_1005",
+    "agent_id": "agent_017",
+    "text": "My discount code isn’t working. Help!",
+    "resolution_status": "resolved",
+    "sentiment": "negative",
+    "category": ["Promotions"],
+    "date": "2024-03-05T14:30:00Z"
+  },
+  {
+    "interaction_type": "phone",
+    "customer_id": "cust_1006",
+    "agent_id": "agent_005",
+    "text": "The warranty claim process is too complicated.",
+    "resolution_status": "pending",
+    "sentiment": "negative",
+    "category": ["Warranty"],
+    "date": "2024-03-06T16:40:00Z"
+  },
+  {
+    "interaction_type": "chat",
+    "customer_id": "cust_1007",
+    "agent_id": "agent_019",
+    "text": "The agent was rude and unhelpful.",
+    "resolution_status": "escalated",
+    "sentiment": "negative",
+    "category": ["Customer Service"],
+    "date": "2024-03-07T12:55:00Z"
+  },
+  {
+    "interaction_type": "email",
+    "customer_id": "cust_1008",
+    "agent_id": "agent_003",
+    "text": "Can I change my shipping address?",
+    "resolution_status": "resolved",
+    "sentiment": "neutral",
+    "category": ["Shipping"],
+    "date": "2024-03-08T09:25:00Z"
+  },
+  {
+    "interaction_type": "phone",
+    "customer_id": "cust_1009",
+    "agent_id": "agent_011",
+    "text": "The product works great! No complaints.",
+    "resolution_status": "resolved",
+    "sentiment": "positive",
+    "category": ["General Feedback"],
+    "date": "2024-03-09T17:15:00Z"
+  },
+  {
+    "interaction_type": "chat",
+    "customer_id": "cust_1010",
+    "agent_id": "agent_014",
+    "text": "My order status hasn’t updated in 5 days.",
+    "resolution_status": "pending",
+    "sentiment": "negative",
+    "category": ["Shipping"],
+    "date": "2024-03-10T14:05:00Z"
+  }
+]
