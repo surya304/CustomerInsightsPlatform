@@ -1,4 +1,3 @@
-import React from 'react';
 import useData from '../hooks/useData';
 
 export function TrendAnalysisPage() {

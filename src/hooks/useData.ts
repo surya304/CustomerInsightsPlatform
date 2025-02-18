@@ -4,7 +4,7 @@ import { GraphQLClient, gql } from 'graphql-request';
 // Access environment variables using import.meta.env
 const API_URL = import.meta.env.DEV 
   ? import.meta.env.VITE_LOCAL_API_URL 
-  : import.meta.env.VITE_LIVE_API_URL;
+  : import.meta.env.VITE_LIVE_API_URL;  
 
 interface Review {
     id: string;

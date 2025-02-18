@@ -1,4 +1,4 @@
-import React from 'react';
+
 import useData from '../hooks/useData';
 import Insights from '../components/Insights';
 

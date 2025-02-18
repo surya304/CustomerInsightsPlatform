@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Pie } from 'react-chartjs-2';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import {
