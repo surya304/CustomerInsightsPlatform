@@ -14,6 +14,13 @@ import {
 
 ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale);
 
+type Sentiment = 'positive' | 'negative' | 'neutral';
+
+interface SentimentItem {
+  sentiment: Sentiment;
+  [key: string]: any; 
+}
+
 interface Review {
   id: string;
   source: string;
@@ -64,21 +71,29 @@ interface FeedbackData {
   customerSupportTickets: CustomerSupportTicket[];
 }
 
+
+interface FeedbackItem {
+  id: string;
+  sentiment: Sentiment;
+  category?: string[];
+  [key: string]: any;
+}
+
 interface FeedbackSourceBreakdownProps {
   data: FeedbackData;
 }
 
 const FeedbackSourceBreakdown: React.FC<FeedbackSourceBreakdownProps> = ({ data }) => {
-  const calculateSentimentDistribution = (items: any[]) => {
-    const counts = {
+  const calculateSentimentDistribution = (items: SentimentItem[]) => {
+    const counts: Record<Sentiment, number> = {
       positive: 0,
       negative: 0,
       neutral: 0,
     };
+    
     items.forEach(item => counts[item.sentiment]++);
     return counts;
   };
-
   const renderStars = (rating: number) => {
     return [...Array(5)].map((_, index) => (
       <Star
@@ -90,8 +105,8 @@ const FeedbackSourceBreakdown: React.FC<FeedbackSourceBreakdownProps> = ({ data 
     ));
   };
 
-  const renderSentimentIndicator = (sentiment: string) => {
-    const colors = {
+  const renderSentimentIndicator = (sentiment: Sentiment) => {
+    const colors: Record<Sentiment, string> = {
       positive: 'bg-green-500',
       negative: 'bg-red-500',
       neutral: 'bg-yellow-500',
@@ -100,8 +115,8 @@ const FeedbackSourceBreakdown: React.FC<FeedbackSourceBreakdownProps> = ({ data 
       <span className={`inline-block w-2 h-2 rounded-full ${colors[sentiment]}`} />
     );
   };
-
-  const createPieData = (sentimentCounts: any) => ({
+  
+  const createPieData = (sentimentCounts: Record<Sentiment, number>) => ({
     labels: ['Positive', 'Negative', 'Neutral'],
     datasets: [
       {
@@ -117,7 +132,7 @@ const FeedbackSourceBreakdown: React.FC<FeedbackSourceBreakdownProps> = ({ data 
     ],
   });
 
-  const renderFeedbackCard = (item: any, type: string) => {
+  const renderFeedbackCard = (item: FeedbackItem, type: 'reviews' | 'surveys' | 'social' | 'support') => {
     const date = new Date(parseInt(item.date));
     
     return (

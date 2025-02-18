@@ -19,10 +19,14 @@ import {
 // Register ChartJS components
 ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale);
 
+type Sentiment = 'positive' | 'negative' | 'neutral';
+
+
 interface FeedbackItem {
-  sentiment: string;
+  sentiment: Sentiment;  
   category?: string[];
 }
+
 
 interface DashboardData {
   reviews: FeedbackItem[];
@@ -41,15 +45,24 @@ const DashboardSummary: React.FC<DashboardSummaryProps> = ({ data }) => {
     data.socialMediaPosts.length + data.customerSupportTickets.length;
 
   // Calculate sentiment counts
-  const sentimentCounts = {
+  const sentimentCounts: Record<Sentiment, number> = {
     positive: 0,
     negative: 0,
     neutral: 0,
   };
+  
 
   // Count sentiments from all sources
+  // [...data.reviews, ...data.surveys, ...data.socialMediaPosts, ...data.customerSupportTickets]
+  //   .forEach(item =>
+      
+  //     console.log(item.sentiment,'item.sentiment');
+      
+  //     sentimentCounts[item.sentiment]++);
+
+
   [...data.reviews, ...data.surveys, ...data.socialMediaPosts, ...data.customerSupportTickets]
-    .forEach(item => sentimentCounts[item.sentiment]++);
+  .forEach(item => sentimentCounts[item.sentiment]++);
 
   // Calculate sentiment score
   const overallSentimentScore = ((sentimentCounts.positive - sentimentCounts.negative) / 
